@@ -1,1 +1,0 @@
-ATTRIBUTE: str = '__stash'
