@@ -1,23 +1,46 @@
 # stash
 Stash data in objects
 
+## Installation
+```console
+pip install git+https://github.com/tombulled/stash@main
+```
+
 ## Usage
+
+### Basic Stashing
 ```python
->>> import stash
->>>
->>> # stash's stash
->>> stash.stash
-Stash()
->>> stash.stash.foo = 'bar'
->>> stash.stash
-Stash(foo='bar')
->>>
->>> # create stashes
->>> import sys
->>> s = stash.new(sys)
->>> s
-Stash()
->>> s.name = 'Sam'
->>> s
-Stash(name='Sam')
+import stash
+
+def foo():
+    pass
+
+my_stash = stash.bind(foo)
+
+my_stash.message = 'Hello, World!'
+```
+
+```python
+>>> stash.get(foo)
+namespace(message='Hello, World!')
+```
+
+### Custom Stashing
+```python
+import stash
+
+stasher = stash.Stasher(attr='__labels__', container=dict)
+
+def foo():
+    pass
+
+labels = stasher.bind(foo)
+
+labels['author'] = 'John Doe'
+labels['deprecated'] = True
+```
+
+```python
+>>> stasher.get(foo)
+{'author': 'John Doe', 'deprecated': True}
 ```
