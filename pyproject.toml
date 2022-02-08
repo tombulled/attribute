@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "stash"
-version = "0.1.2"
+version = "0.1.3"
 description = "Stash data in objects"
 authors = ["Tom Bulled <26026015+tombulled@users.noreply.github.com>"]
 license = "MIT"

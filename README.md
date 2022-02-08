@@ -15,7 +15,7 @@ import stash
 def foo():
     pass
 
-my_stash = stash.bind(foo)
+my_stash = stash.setdefault(foo)
 
 my_stash.message = 'Hello, World!'
 ```
@@ -29,12 +29,12 @@ namespace(message='Hello, World!')
 ```python
 import stash
 
-stasher = stash.Stasher(attr='__labels__', container=dict)
+stasher = stash.Stasher('_labels_', factory=dict)
 
 def foo():
     pass
 
-labels = stasher.bind(foo)
+labels = stasher.setdefault(foo)
 
 labels['author'] = 'John Doe'
 labels['deprecated'] = True
