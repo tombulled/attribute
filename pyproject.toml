@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "attribute"
-version = "0.1.1"
+version = "0.1.4"
 description = "Attribute management made easy"
 authors = ["Tom Bulled <26026015+tombulled@users.noreply.github.com>"]
 license = "MIT"
