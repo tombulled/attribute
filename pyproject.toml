@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "tombulled-attribute"
+name = "attribute"
 version = "0.1.5"
 description = "Attribute management made easy"
 authors = ["Tom Bulled <26026015+tombulled@users.noreply.github.com>"]
@@ -8,9 +8,6 @@ readme = "README.md"
 homepage = "https://github.com/tombulled/attribute"
 repository = "https://github.com/tombulled/attribute"
 keywords = ["python", "attribute"]
-packages = [
-    {include = "attribute"}
-]
 
 [tool.poetry.dependencies]
 python = "^3.8"

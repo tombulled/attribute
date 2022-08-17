@@ -3,7 +3,7 @@ Attribute management made easy
 
 ## Installation
 ```console
-pip install git+https://github.com/tombulled/attribute@main
+pip install attribute
 ```
 
 ## Usage
